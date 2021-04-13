@@ -5,7 +5,7 @@ const kit = ContractKit.newKitFromWeb3(web3)
 
 const getAccount = require('./getAccount').getAccount
 
-const MigrationContract = require('./build/contracts/Migrations.json')
+const MigrationContract = require('./build/contracts/Miau.json')
 
 async function awaitWrapper(){
     

@@ -10,7 +10,7 @@ const filePath = path.join(__dirname, './.secret')
 function getAccount() {
     return new Promise(resolve => {
         if(fs.existsSync(filePath)){
-            fs.readFile(filePath.anchor, {encoding: 'utf-8'}, (err, data) => {
+            fs.readFile(filePath, {encoding: 'utf-8'}, (err, data) => {
                 resolve(web3.eth.accounts.privateKeyToAccount(data))
             })
         } else {
@@ -29,7 +29,7 @@ function getAccount() {
     })
 }
 
-getAccount()
+// getAccount()
 
 module.exports = {
     getAccount
